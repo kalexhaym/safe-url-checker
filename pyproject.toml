@@ -1,0 +1,16 @@
+[tool.poetry]
+name = "safe-url-checker"
+version = "1.0.0"
+description = "A library for checking links for security using several different integrations."
+authors = ["Aleksei Kovalenko <kalexhaym@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+packages = [{include = "safe_url_checker"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
