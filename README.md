@@ -1,3 +1,7 @@
+# Installation
+```
+poetry add safe_url_checker
+```
 
 # Description
 A library for checking links for security using several different integrations.
