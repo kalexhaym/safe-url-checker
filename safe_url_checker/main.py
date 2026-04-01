@@ -15,7 +15,7 @@ class IntegrationNotFound(Exception):
 
 class IntegrationMissingParam(Exception):
     def __init__(self, integration: str, param: str):
-        super().__init__(f"Integration '{integration}' requires param: {param}")
+        super().__init__(f"Integration {integration} requires param: {param}")
 
 class SafeUrlChecker:
     def __init__(self) -> None:
@@ -37,6 +37,9 @@ class SafeUrlChecker:
         self.selected_integrations = integrations
 
     def set_integration_params(self, integration: str, params: dict[str, str]) -> None:
+        if integration not in INTEGRATIONS:
+            raise IntegrationNotFound(integration)
+
         self.params[integration] = params
 
     def check(self, urls: list[str]) -> dict[str, CheckResult]:

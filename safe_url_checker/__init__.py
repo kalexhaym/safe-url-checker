@@ -1,4 +1,4 @@
-from .main import SafeUrlChecker
+from .main import SafeUrlChecker, IntegrationNotFound, IntegrationMissingParam
 
 
-__all__ = ["SafeUrlChecker"]
+__all__ = ["SafeUrlChecker", "IntegrationNotFound", "IntegrationMissingParam"]
